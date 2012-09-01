@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'bootstrap-sass', '2.0.4'
 gem 'pg', '0.12.2'
 
 # Bundle edge Rails instead:
@@ -8,6 +9,7 @@ gem 'pg', '0.12.2'
 
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
+  gem 'guard-rspec', '0.5.5'
 end
 
 
@@ -25,9 +27,12 @@ end
 
 gem 'jquery-rails'
 
+# Test gems on Macintosh OS X
 group :test do
-  gem 'capybara','1.1.2'
-end
+  gem 'capybara', '1.1.2'
+  gem 'rb-fsevent', '0.9.1', :require => false
+  gem 'growl', '1.0.3'
+end 
 
 
 # To use ActiveModel has_secure_password
